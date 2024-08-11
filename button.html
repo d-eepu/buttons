@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons in javascript</title>
+    <style>
+        #main{
+            text-align: center;
+            margin-top: 200px;
+        }
+        #text{
+            font-size: 5rem;
+        }
+        #decbtn{
+            background-color: blue;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        #reset{
+            background-color: blue;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        #incbtn{
+            background-color: blue;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="text">0</div>
+            <button id="decbtn" onclick="f1()">Decrease</button>
+            <button id="reset">Reset</button>
+            <button id="incbtn">Increase</button>
+    </div>
+<script>
+    const increase=document.getElementById('incbtn');
+    const reset=document.getElementById('reset');
+    const decrease=document.getElementById('decbtn');
+    const textdata=document.getElementById('text');
+    let count=0;
+    increase.onclick=()=>{
+        count++;
+        textdata.innerText=count;
+    }
+    reset.onclick=()=>{
+        count=0;
+        textdata.innerText=count;
+    }
+    decrease.onclick=()=>{
+        count--;
+        textdata.innerText=count;
+    }
+
+</script>
+</body>
+</html>
